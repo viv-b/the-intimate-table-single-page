@@ -1,0 +1,69 @@
+_inputs:
+  gallery_image:
+    label: Gallery Image
+    comment:
+    options:
+      width: 700
+      height: 933
+      resize_style: "contain"
+      expandable: false
+      uploads_dir: "uploads/gallery"
+   
+_editables:
+  text:
+    format: p
+    removeformat: true
+    bold: true
+    italic: true
+    link: true
+    undo: true
+    redo: true
+    left: "align-left"
+    center: "align-center"
+    right: "align-right"
+    justify: "align-justify"
+    image: true
+    styles: "/css/editor.css"
+  block:
+    format: p
+    removeformat: true
+    bold: true
+    italic: true
+    link: true
+    undo: true
+    redo: true
+    left: "align-left"
+    center: "align-center"
+    right: "align-right"
+    justify: "align-justify"
+    image: true
+    styles: "/css/editor.css"
+  content:
+    format: p
+    removeformat: true
+    bold: true
+    italic: true
+    link: true
+    undo: true
+    redo: true
+    left: "align-left"
+    center: "align-center"
+    right: "align-right"
+    justify: "align-justify"
+    image: true
+    styles: "/css/editor.css"
+_structures:
+  gallery:
+    style: 'modal'
+    values:
+      - label: 'Image'
+        value:
+          _id: image
+          title:
+          gallery_image:
+      - label: 'Text'
+        value:
+          _id: text
+          html:
+          title:
+  

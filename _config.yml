@@ -1,0 +1,28 @@
+title: 'The Intimate Table'
+url_dev: 'https://www.theintimatetable.co.nz'
+baseurl:
+
+kramdown:
+  auto_ids: false
+
+social:
+  default_image: /images/fb-hero.jpg
+
+_comments:
+
+
+collections:
+
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "page"

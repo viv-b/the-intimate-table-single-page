@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<img src="/images/pawpaw-and-passionfruit-home.jpg" alt="" style="display: none;" />
+
+<div class="main-wrapper content-wrapper slide-in-from-left" id="{{ page._page_id }}">
+
+	<section class="section full-screen-height">
+	     
+	  <div class="container">
+
+    			<div class="columns dev-border" style="height: 100%; align-items: center;">
+    
+    				<div class="column">
+    				    
+    						{{ content }}
+    						
+    				</div>
+    
+    		  </div>
+
+		</div>
+
+	</section>
+
+  {% unless page.url == "/contact/" %}
+    {% include footer.html %}
+  {% endunless %}
+
+</div>

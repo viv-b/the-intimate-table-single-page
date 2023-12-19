@@ -1,0 +1,323 @@
+---
+---
+@charset "utf-8";
+/*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
+
+/* From here https://bulma.io/documentation/helpers/spacing-helpers/ */
+$spacing-shortcuts: ("margin": "mg");
+$spacing-horizontal: "h";
+$spacing-vertical: null;
+$spacing-values: ("small": 15px, "medium": 40px, "large": 70px, "xlarge": 100px);
+
+
+@import "utilities/_all";
+@import "base/_all";
+@import "elements/_all";
+@import "form/_all";
+@import "components/_all";
+@import "grid/_all";
+@import "helpers/_all";
+@import "layout/_all";
+
+
+/* Sort the spacing for differnt sizes as per set up above */
+@include mobile {    
+}
+@include tablet {   
+}
+@include touch {   
+}
+@include desktop {
+}
+@include widescreen {
+}
+@include fullhd {
+}
+
+
+/* CLOUDCANNON EDITING */
+.editor-link {
+  display: none;
+}
+.cms-editor-active .editor-link {
+  display: inline-block;
+  background: yellow;
+  padding: 6px 8px 4px 8px;
+  cursor: pointer;
+  color: #111 !important;
+  border-radius: 4px;
+  margin: 4px;
+}
+.cms-editor-active .editor-link i {
+  color: #111 !important;
+}
+.cms-editor-active .editor-link.sort-number {
+  display: inline-block;
+}
+
+
+
+// Setting base sizes for typography - responsive
+// https://stackoverflow.com/questions/52605748/how-to-set-base-font-sizes-in-bulma-css-for-responsive-design
+html {
+  font-size: 10px;
+  
+  @include tablet {
+    font-size: 10px;
+  }
+  @include desktop {
+    font-size: 10px;
+  }
+  @include widescreen {
+    font-size: 10px;
+  }
+  @include fullhd {
+    font-size: 10px;
+  }
+  
+}
+
+// Update Typography. So can use heading elements directly in CloudCannon editor without needing to use classes.
+// Use the SASS 'extend' to take all of the title calls attributes and apply to these elements
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+
+h1 {
+  font-family: swear-display-cilati, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  /* font-size: 7.7rem; */
+  font-size: 8rem;
+  line-height: 1;
+  margin-bottom: 11rem;
+}
+h2 {
+  font-family: swear-display-cilati, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size-3;
+}
+h3 {
+  font-family: swear-display-cilati, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size-4;
+}
+h4 {
+  font-family: swear-display-cilati, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size-5;
+}
+p.contact-blurb {
+  font-family: swear-display-cilati, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+
+
+@media only screen and (min-width: 769px) {
+  
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  h1 {
+    margin-bottom: 0.1rem;
+  }
+  
+}
+
+@media only screen and (min-width: 1216px) {
+  
+}
+
+@media only screen and (min-width: 1408px) {
+  
+}
+
+
+/* Add Breakpoint responsiveness to spacing helpers. */
+/* From: https://github.com/jgthms/bulma/issues/451  */
+
+@each $property, $shortcut in $spacing-shortcuts {
+  @each $name, $value in $spacing-values {
+    // Cardinal directions
+    @each $direction, $suffix in $spacing-directions {
+      @include mobile {
+        .#{$shortcut}#{$suffix}-#{$name}-mobile {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+      @include tablet {
+        .#{$shortcut}#{$suffix}-#{$name}-tablet {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+      @include touch {
+        .#{$shortcut}#{$suffix}-#{$name}-touch {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+      @include desktop {
+        .#{$shortcut}#{$suffix}-#{$name}-desktop {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+      @include widescreen {
+        .#{$shortcut}#{$suffix}-#{$name}-widescreen {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+      @include fullhd {
+        .#{$shortcut}#{$suffix}-#{$name}-fullhd {
+          #{$property}-#{$direction}: $value !important;
+        }
+      }
+    }
+
+    // Horizontal axis
+    @if $spacing-horizontal != null {
+      @include mobile {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-mobile {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+      @include tablet {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-tablet {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+      @include touch {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-touch {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+      @include desktop {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-desktop {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+      @include widescreen {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-widescreen {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+      @include fullhd {
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-fullhd {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+    }
+
+    // Vertical axis
+    @if $spacing-vertical != null {
+      @include mobile {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-mobile {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+      @include tablet {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-tablet {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+      @include touch {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-touch {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+      @include desktop {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-desktop {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+      @include widescreen {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-widescreen {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+      @include fullhd {
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-fullhd {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+    }
+  }
+}
+
+/* --- PRINT CSS --- */
+
+.show-for-print-only {
+  display: none;
+}
+
+@media print {
+
+  .hide-for-print {
+    display: none !important;
+  }
+  .show-for-print-only {
+    display: block !important;
+  }
+  .print-full-width {
+    width: 100% !important;
+  }
+  #print-logo {
+    text-align: center;
+  }
+  .slide-in-from-left {
+    transform: translateX(0px) !important;
+  }
+  .slide-in-from-right {
+    transform: translateX(0px) !important;
+  }
+  html body * {
+    color: #000 !important;
+  }
+  html body a {
+    color: #000 !important;
+  }
+  html body img {
+    max-width: 400px;
+  }
+  html section {
+    background-color: none !important;
+  }
+  html .content-wrapper {
+    opacity: 1 !important;
+  }
+  html #menu-icon-wrapper {
+    display: none !important;
+  }
+  html #loader {
+    display: none !important;
+  }
+  html #my-navigation,
+  html #my-navigation-mobile {
+    display: none !important;
+  }
+
+}
+

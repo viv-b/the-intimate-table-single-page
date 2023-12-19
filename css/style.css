@@ -1,0 +1,113 @@
+body {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  padding: 0;
+  /* The overflow hidden on body stops the issue of content that is transitioned to the left or right
+     prior to the GSAP animation, triggering a horizontal scrollbar on mobile. DOesn't seemt to be an issue
+     on laptop/PC */
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.content-wrapper {
+  opacity: 0.01;
+}
+
+img {
+  opacity: 0;
+}
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  letter-spacing: 0.075em;
+  font-weight: 600;
+  color: #663f3c;
+}
+.work p {
+  color: #231F20; /* Added 17/02/2023 */
+}
+a.instagram {
+  color: #231F20;
+}
+
+.content-wrapper p:last-child {
+  margin-bottom:  0;
+}
+
+
+/* --- Tweak BULMA helpers --- */
+
+.mb-0 {
+  margin-bottom: 5px !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+
+
+/* https://stackoverflow.com/questions/3331353/transitions-on-the-css-display-property */
+/* At the time of this post all major browsers disable CSS transitions if you try to
+change the display property, but CSS animations still work fine so we can use them as a workaround.*/
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+
+/* --- HOME PAGE --- */
+
+#home {
+  background-image: url(/images/pawpaw-and-passionfruit-home.jpg);
+  background-size: cover;
+}
+#home * {
+  color: #fff;
+}
+#about * {
+  color: #663f3c;
+}
+#work {
+  background-color: #fff;
+}
+#work a {
+  color: #231F20;
+}
+#contact {
+  background-color: #b3c656;
+}
+#contact * {
+  color: #fff;
+}
+
+
+/* --- ANIMATION DEFAULTS --- */
+
+.slide-in-from-left {
+  transform: translateX(0px);
+}
+.slide-in-from-right {
+  transform: translateX(0px);
+}
+
+
+/* --- GENERAL MEDIA QUERIES --- */
+
+@media only screen and (min-width: 1024px) {
+  
+}
+
+@media only screen and (min-width: 1216px) {
+
+}
+
+@media only screen and (min-width: 1408px) {
+  
+}
