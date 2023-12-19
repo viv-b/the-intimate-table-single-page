@@ -1,4 +1,4 @@
 /about/ /
 /work/ /
 /contact/ /
-/uploads/pdf/Catered-Menu-01-08-2022.pdf?_cchid=b3f997d0266e7293730d878cc4fb5181 /
+/uploads/pdf/* /
